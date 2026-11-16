@@ -766,8 +766,9 @@ def stack_overflow_source(
         tags: Only questions carrying all of these tags (the API's ``;`` semantics).
             Without tags the source syncs every question of the site: the daily quota is
             gone in minutes. Always pass tags.
-        api_key: Stack Exchange API ``key``. Optional; without it the daily quota is 300
-            calls. Used to build the client when ``service`` is omitted.
+        api_key: Stack Exchange API ``key``. Required; the source refuses to run
+            without one (the anonymous quota of 300 calls/day is too small for a sync).
+            Used to build the client when ``service`` is omitted.
         service: Pre-built client (see :func:`build_stack_overflow_service`). Mainly an
             injection point for tests and hosts. Its ``request`` takes a ``check_active``
             keyword and must call it before each request attempt, retries and waits included.

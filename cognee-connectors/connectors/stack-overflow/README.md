@@ -48,7 +48,7 @@ await cognee.remember(
     stack_overflow_source(
         tags=["cognee"],
         resource_name="stack_overflow_cognee",
-        api_key="<stackapps key>",  # optional, raises the daily quota 300 -> 10,000
+        api_key="<stackapps key>",  # required; raises the daily quota 300 -> 10,000
     ),
     dataset_name="stack_overflow",
     primary_key="id",
@@ -68,7 +68,7 @@ last run are listed, and only records whose text changed are re-extracted.
 | `resource_name` | Names this connection: it keys the sync state and the cleanup of deleted records | required, one per (site, tags) selection |
 | `site` | The Stack Exchange site id: `stackoverflow`, `serverfault`, `askubuntu`, ... | `stackoverflow` |
 | `tags` | Only questions carrying all of these tags (the API's `;` AND semantics). **Without tags the quota is gone in minutes** | none |
-| `api_key` | Stack Exchange API `key` from stackapps.com | none (300 calls/day) |
+| `api_key` | Stack Exchange API `key` from stackapps.com | required (the source refuses to run without one) |
 | `include` | `"questions"`, or `("questions", "answers")` | both |
 | `max_requests` | Budget of API calls in one run; a call the client retries counts once | 200 |
 | `check_active` | Host checkpoint, called before every request | none |

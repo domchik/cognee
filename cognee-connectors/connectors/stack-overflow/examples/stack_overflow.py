@@ -16,9 +16,9 @@ One-time setup
 
        pip install "cognee-connector-stack-overflow[cognee]"
 
-2. Optional but strongly recommended: register an app at
-   https://stackapps.com/apps/oauth/register and export its key. Without a key
-   the daily API quota is 300 calls, which a single tag can spend in minutes.
+2. Register an app at https://stackapps.com/apps/oauth/register and export
+   its key — the source requires one (the anonymous quota of 300 calls/day
+   is too small for even a single tag):
 
        export STACK_OVERFLOW_API_KEY=<key>
 
