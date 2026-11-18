@@ -53,6 +53,7 @@ this workspace and never a runtime dependency of a connector
 | [Obsidian](connectors/obsidian) | [`cognee-connector-obsidian`](https://pypi.org/project/cognee-connector-obsidian/) | local | `obsidian` | ✅ | — | ported |
 | [OneNote](connectors/onenote) | [`cognee-connector-onenote`](https://pypi.org/project/cognee-connector-onenote/) | api_key | `onenote` | ✅ | — | ported |
 | [Slack](connectors/slack) | [`cognee-connector-slack`](https://pypi.org/project/cognee-connector-slack/) | oauth2 | — | ✅ | — | ported |
+| [Stack Overflow](connectors/stack-overflow) | [`cognee-connector-stack-overflow`](https://pypi.org/project/cognee-connector-stack-overflow/) | api_key | `stack_overflow` | ✅ | — | ported |
 <!-- inventory:end -->
 
 The table is rendered from [`inventory.yml`](inventory.yml) by `scripts/render_inventory.py`.

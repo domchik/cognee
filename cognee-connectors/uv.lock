@@ -48,6 +48,7 @@ members = [
     "cognee-connector-obsidian",
     "cognee-connector-onenote",
     "cognee-connector-slack",
+    "cognee-connector-stack-overflow",
     "cognee-connectors-core",
     "cognee-connectors-workspace",
 ]
@@ -1209,6 +1210,28 @@ requires-dist = [
     { name = "cognee", marker = "extra == 'cognee'", specifier = ">=1.6.5,<2" },
     { name = "cognee-connectors-core", editable = "core" },
     { name = "pydantic", specifier = ">=2.13" },
+]
+provides-extras = ["cognee"]
+
+[[package]]
+name = "cognee-connector-stack-overflow"
+version = "0.1.0"
+source = { editable = "connectors/stack-overflow" }
+dependencies = [
+    { name = "cognee-connectors-core", extra = ["dlt"] },
+    { name = "requests" },
+]
+
+[package.optional-dependencies]
+cognee = [
+    { name = "cognee" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cognee", marker = "extra == 'cognee'", specifier = ">=1.6.5,<2" },
+    { name = "cognee-connectors-core", extras = ["dlt"], editable = "core" },
+    { name = "requests", specifier = ">=2.26.0,<3" },
 ]
 provides-extras = ["cognee"]
 

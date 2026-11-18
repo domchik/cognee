@@ -223,3 +223,19 @@ connectors:
       cognee: "cognee/tasks/ingestion/connectors/onenote.py"
       cloud: null
     env_vars: []
+  - slug: stack-overflow
+    package: cognee-connector-stack-overflow
+    module: cognee_connector_stack_overflow
+    directory: connectors/stack-overflow
+    display_name: "Stack Overflow"
+    auth: api_key
+    tier: null
+    sources: [stack_overflow]
+    hosts:
+      cognee: true
+      cloud: false
+    status: ported
+    origin:
+      cognee: null
+      cloud: null
+    env_vars: []
